@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Sakshi Electronics - Jagdishpur Bazar, Madhepura">
-  <title>Sakshi Electronics | Jagdishpur Bazar, Madhepura</title>
+  <title>Sakshi Electronics | Torch, LED Bulb, Tubelight & Fan</title>
+
+  <meta name="description"
+        content="Sakshi Electronics - Torch, LED Bulb, Tubelight और Fan की जानकारी। Owner Mukesh Sah">
 
   <style>
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     html {
@@ -19,82 +23,889 @@
     }
 
     body {
-      font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      background: #f4f9ff;
-      color: #102a4c;
-      line-height: 1.5;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+      background: #f5f7fa;
+      color: #222;
     }
 
     /* =========================
-       TOP BAR
+       INTRO ANIMATION
     ========================== */
 
-    .top-bar {
-      background: #073b70;
-      color: white;
-      padding: 10px 5%;
+    #intro {
+      position: fixed;
+      inset: 0;
+      background: #111827;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      gap: 15px;
-      font-size: 15px;
-      font-weight: 600;
+      z-index: 9999;
+      animation: introHide 1s ease forwards;
+      animation-delay: 2.8s;
     }
 
-    .top-left,
-    .top-right {
+    .intro-box {
+      text-align: center;
+      color: white;
+      animation: logoZoom 1.5s ease;
+    }
+
+    .intro-logo {
+      width: 115px;
+      height: 115px;
+      margin: auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #facc15, #f97316);
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
+      font-size: 58px;
+      box-shadow: 0 0 45px rgba(250,204,21,0.7);
     }
+
+    .intro-box h1 {
+      margin-top: 18px;
+      font-size: 30px;
+    }
+
+    .intro-box p {
+      margin-top: 8px;
+      color: #facc15;
+    }
+
+    @keyframes logoZoom {
+
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+    }
+
+    @keyframes introHide {
+
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+    }
+
 
     /* =========================
        HEADER
     ========================== */
 
     header {
-      background: white;
-      box-shadow: 0 3px 15px rgba(0, 45, 90, 0.12);
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      padding: 15px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
-    .navbar {
-      min-height: 125px;
-      padding: 10px 3%;
-      display: flex;
-      align-items: center;
-      gap: 25px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
-      flex: 1;
-      min-width: 320px;
+      gap: 12px;
     }
 
-    /* Logo */
     .logo {
-      width: 105px;
-      height: 105px;
-      object-fit: contain;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #facc15, #f97316);
       border-radius: 50%;
-      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
     }
 
-    /* Shop Name */
-    .brand-text h1 {
-      font-size: clamp(28px, 3.2vw, 50px);
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: #08366d;
-     
+    .brand h2 {
+      font-size: 23px;
+    }
+
+    .brand span {
+      color: #facc15;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 470px;
+      padding: 70px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .hero-text h1 {
+      font-size: 45px;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .hero-text h1 span {
+      color: #1d4ed8;
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .owner {
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .hero-light {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        #fff7ae 0%,
+        #fde047 25%,
+        #facc15 45%,
+        #1e3a8a 70%
+      );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 100px;
+
+      box-shadow: 0 0 80px rgba(250,204,21,0.7);
+
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+
+      from {
+        transform: scale(1);
+        box-shadow: 0 0 40px rgba(250,204,21,0.5);
+      }
+
+      to {
+        transform: scale(1.06);
+        box-shadow: 0 0 90px rgba(250,204,21,0.9);
+      }
+
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .call-btn {
+      background: #1d4ed8;
+      color: white;
+    }
+
+    .call-btn:hover {
+      background: #1e40af;
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-btn {
+      background: #16a34a;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: #15803d;
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    section {
+      padding: 60px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #111827;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+
+    /* =========================
+       PRODUCTS
+    ========================== */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border: 1px solid #e5e7eb;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.13);
+    }
+
+    .product-icon {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      border-radius: 20px;
+      background: #eff6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .product h3 {
+      margin-top: 20px;
+      font-size: 23px;
+      color: #111827;
+    }
+
+    .product p {
+      margin-top: 12px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+
+    .product-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 17px;
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .product-btn:hover {
+      background: #15803d;
+    }
+
+
+    /* =========================
+       TORCH INFORMATION
+    ========================== */
+
+    .torch-info {
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      border-radius: 25px;
+      padding: 45px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .torch-info h2 {
+      font-size: 32px;
+      color: #facc15;
+      margin-bottom: 18px;
+    }
+
+    .torch-info p {
+      line-height: 1.8;
+      color: #e5e7eb;
+    }
+
+    .torch-features {
+      display: grid;
+      gap: 15px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.08);
+      padding: 17px;
+      border-radius: 12px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: #111827;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      color: #facc15;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      color: #d1d5db;
+      font-size: 17px;
+    }
+
+    .contact-owner {
+      margin-top: 18px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .contact-number {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #030712;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #facc15;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .torch-info {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 14px 5%;
+      }
+
+      .brand h2 {
+        font-size: 19px;
+      }
+
+      .logo {
+        width: 45px;
+        height: 45px;
+      }
+
+      .hero {
+        padding: 55px 5%;
+      }
+
+      .hero-text h1 {
+        font-size: 31px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero-light {
+        width: 190px;
+        height: 190px;
+        font-size: 75px;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .torch-info {
+        padding: 30px 22px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       INTRO
+  ========================== -->
+
+  <div id="intro">
+
+    <div class="intro-box">
+
+      <div class="intro-logo">
+        🔦
+      </div>
+
+      <h1>Sakshi Electronics</h1>
+
+      <p>रोशनी और इलेक्ट्रॉनिक्स की आपकी दुकान</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="brand">
+
+      <div class="logo">
+        🔦
+      </div>
+
+      <h2>
+        Sakshi <span>Electronics</span>
+      </h2>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <div class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Welcome to
+        <span>Sakshi Electronics</span>
+      </h1>
+
+      <p>
+        आपके घर और रोज़मर्रा की जरूरतों के लिए
+        उपयोगी इलेक्ट्रॉनिक सामान।
+        यहां Torch, LED Bulb, Tubelight और Fan
+        जैसे products की जानकारी उपलब्ध है।
+      </p>
+
+      <div class="owner">
+        👤 Owner: Mukesh Sah
+      </div>
+
+
+      <!-- CALL + WHATSAPP -->
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn call-btn"
+          href="tel:8678043929">
+          📞 मुझे Call करें
+        </a>
+
+
+        <a
+          class="btn whatsapp-btn"
+          href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20aapke%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          💬 WhatsApp पर जानकारी लें
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-light">
+      💡
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       PRODUCTS
+  ========================== -->
+
+  <section>
+
+    <div class="section-title">
+
+      <h2>हमारे Products</h2>
+
+      <p>
+        अपनी जरूरत के अनुसार product की जानकारी लें
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- TORCH -->
+
+      <article class="product">
+
+        <div class="product-icon">
+          🔦
+        </div>
+
+        <h3>
+          Torch
+        </h3>
+
+        <p>
+          अंधेरे में रोशनी के लिए उपयोगी Torch।
+          घर, दुकान, यात्रा और बिजली जाने के समय
+          काफी उपयोगी।
+        </p>
+
+        <a
+          class="product-btn"
+          href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20Torch%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          WhatsApp पर पूछें
+        </a>
+
+      </article>
+
+
+      <!-- LED BULB -->
+
+      <article class="product">
+
+        <div class="product-icon">
+          💡
+        </div>
+
+        <h3>
+          LED Bulb
+        </h3>
+
+        <p>
+          घर और दुकान को रोशन करने के लिए
+          LED Bulb। कम बिजली में अच्छी रोशनी
+          के लिए उपयोगी।
+        </p>
+
+        <a
+          class="product-btn"
+          href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20LED%20Bulb%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          WhatsApp पर पूछें
+        </a>
+
+      </article>
+
+
+      <!-- TUBELIGHT -->
+
+      <article class="product">
+
+        <div class="product-icon">
+          💡
+        </div>
+
+        <h3>
+          Tubelight
+        </h3>
+
+        <p>
+          कमरे, दुकान और ऑफिस में पर्याप्त
+          रोशनी के लिए Tubelight।
+          लंबे समय तक उपयोग के लिए सुविधाजनक।
+        </p>
+
+        <a
+          class="product-btn"
+          href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20Tubelight%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          WhatsApp पर पूछें
+        </a>
+
+      </article>
+
+
+      <!-- FAN -->
+
+      <article class="product">
+
+        <div class="product-icon">
+          🌀
+        </div>
+
+        <h3>
+          Fan
+        </h3>
+
+        <p>
+          गर्मी में हवा के लिए उपयोगी Fan।
+          घर, दुकान और ऑफिस के लिए जरूरत के
+          अनुसार विकल्प।
+        </p>
+
+        <a
+          class="product-btn"
+          href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20Fan%20ke%20baare%20mein%20jaankari%20chahiye."
+          target="_blank">
+          WhatsApp पर पूछें
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       TORCH INFORMATION
+  ========================== -->
+
+  <section>
+
+    <div class="torch-info">
+
+      <div>
+
+        <h2>
+          🔦 Torch के बारे में
+        </h2>
+
+        <p>
+          Torch एक portable light है जिसे आसानी से
+          एक जगह से दूसरी जगह ले जाया जा सकता है।
+          बिजली जाने, रात में बाहर जाने, यात्रा,
+          दुकान या घर के अंधेरे स्थानों में Torch
+          काफी उपयोगी होती है।
+        </p>
+
+        <br>
+
+        <p>
+          अलग-अलग Torch में brightness, battery backup,
+          आकार और रोशनी की range अलग हो सकती है।
+          अपनी जरूरत के अनुसार सही Torch चुनना बेहतर है।
+        </p>
+
+      </div>
+
+
+      <div class="torch-features">
+
+        <div class="feature">
+          🔆 <strong>Bright Light</strong><br>
+          अंधेरे स्थानों में अच्छी रोशनी।
+        </div>
+
+        <div class="feature">
+          🔋 <strong>Battery Powered</strong><br>
+          Battery से चलने वाली portable light।
+        </div>
+
+        <div class="feature">
+          🎒 <strong>Easy to Carry</strong><br>
+          आसानी से साथ ले जाने योग्य।
+        </div>
+
+        <div class="feature">
+          🏠 <strong>Multiple Uses</strong><br>
+          घर, दुकान, यात्रा और emergency में उपयोगी।
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact">
+
+    <h2>
+      📞 हमसे संपर्क करें
+    </h2>
+
+    <p>
+      Torch, LED Bulb, Tubelight और Fan के
+      बारे में जानकारी के लिए संपर्क करें।
+    </p>
+
+    <div class="contact-owner">
+      👤 Owner: Mukesh Sah
+    </div>
+
+    <div class="contact-number">
+      📱 8678043929
+    </div>
+
+
+    <div class="contact-buttons">
+
+      <!-- CALL BUTTON -->
+
+      <a
+        class="btn call-btn"
+        href="tel:8678043929">
+        📞 मुझे Call करें
+      </a>
+
+
+      <!-- WHATSAPP BUTTON -->
+
+      <a
+        class="btn whatsapp-btn"
+        href="https://wa.me/918678043929?text=Namaste%20Mukesh%20Sah%2C%20mujhe%20Sakshi%20Electronics%20ke%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+        target="_blank">
+        💬 WhatsApp पर संपर्क करें
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026
+    <strong>Sakshi Electronics</strong>
+
+    <br><br>
+
+    Owner: Mukesh Sah
+
+    <br>
+
+    📞 8678043929
+
+  </footer>
+
+
+</body>
+</html>
