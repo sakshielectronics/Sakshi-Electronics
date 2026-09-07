@@ -1,710 +1,100 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sakshi Electronics | Jagdishpur Bazar</title>
+  <meta name="description" content="Sakshi Electronics - Jagdishpur Bazar, Madhepura">
+  <title>Sakshi Electronics | Jagdishpur Bazar, Madhepura</title>
 
-<meta name="description" content="Sakshi Electronics - Jagdishpur Bazar, Madhepura. Fan, LED Light, Tube Light, TV और अन्य Electronics सामान।">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f5f7fb;
-    color:#222;
-}
-
-/* HEADER */
-header{
-    background:linear-gradient(135deg,#071952,#088395);
-    color:white;
-    padding:25px 15px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
-}
-
-header h1{
-    font-size:32px;
-    letter-spacing:1px;
-}
-
-header p{
-    margin-top:7px;
-    font-size:15px;
-}
-
-nav{
-    margin-top:15px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 8px;
-    font-weight:bold;
-    font-size:14px;
-}
-
-/* HERO */
-.hero{
-    min-height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
-    url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-    color:white;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:13px 24px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    color:white;
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.whatsapp-btn{
-    background:#25D366;
-}
-
-.mail-btn{
-    background:#e53935;
-}
-
-.call-btn{
-    background:#1565c0;
-}
-
-/* SECTION */
-section{
-    padding:55px 18px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-title h2{
-    color:#071952;
-    font-size:30px;
-}
-
-.section-title p{
-    margin-top:8px;
-    color:#666;
-}
-
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
-}
-
-.card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-.card img{
-    width:100%;
-    height:190px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:18px;
-}
-
-.card h3{
-    color:#071952;
-    margin-bottom:8px;
-}
-
-.card p{
-    color:#666;
-    font-size:14px;
-    line-height:1.5;
-}
-
-.price{
-    display:block;
-    margin-top:12px;
-    font-size:21px;
-    font-weight:bold;
-    color:#088395;
-}
-
-.buy{
-    display:block;
-    margin-top:13px;
-    padding:10px;
-    text-align:center;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* ABOUT */
-.about{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    line-height:1.8;
-    text-align:center;
-}
-
-/* CONTACT */
-.contact-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.contact-card{
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-
-.contact-card h3{
-    color:#071952;
-    margin-bottom:10px;
-}
-
-.contact-card a{
-    color:#088395;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* FOOTER */
-footer{
-    background:#071952;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:20px;
-}
-
-footer p{
-    margin:5px;
-}
-
-/* FLOATING WHATSAPP */
-.floating-whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    text-decoration:none;
-    font-size:28px;
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
-    z-index:999;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-
-    header h1{
-        font-size:26px;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    nav a{
-        font-size:12px;
-        margin:0 4px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero{
-        min-height:400px;
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #f4f9ff;
+      color: #102a4c;
+      line-height: 1.5;
     }
 
-    .hero h2{
-        font-size:31px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .hero p{
-        font-size:15px;
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .top-bar {
+      background: #073b70;
+      color: white;
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      font-size: 15px;
+      font-weight: 600;
     }
 
-    section{
-        padding:40px 15px;
+    .top-left,
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-}
-</style>
-</head>
 
-<body>
-
-<!-- HEADER -->
-<header>
-
-    <h1>⚡ Sakshi Electronics</h1>
-
-    <p>Jagdishpur Bazar, Madhepura</p>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <h2>
-            आपके घर की Electronics जरूरतों का भरोसेमंद ठिकाना
-        </h2>
-
-        <p>
-            Fan, LED Light, Tube Light, TV और कई अन्य
-            इलेक्ट्रॉनिक सामान उचित कीमत पर।
-        </p>
-
-        <div class="hero-buttons">
-
-            <!-- WHATSAPP BUTTON -->
-            <a class="btn whatsapp-btn"
-               href="https://wa.me/918678043929?text=Namaste%20Sakshi%20Electronics%2C%20mujhe%20product%20ke%20baare%20mein%20jaankari%20chahiye."
-               target="_blank">
-                💬 WhatsApp
-            </a>
-
-            <!-- MAIL BUTTON -->
-            <a class="btn mail-btn"
-               href="mailto:sakshielectronics01@gmail.com?subject=Sakshi%20Electronics%20Enquiry">
-                📧 Mail Us
-            </a>
-
-            <!-- CALL BUTTON -->
-            <a class="btn call-btn"
-               href="tel:+918678043929">
-                📞 Call Now
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section id="products">
-
-    <div class="section-title">
-
-        <h2>हमारे Products</h2>
-
-        <p>
-            हमारे यहाँ उपलब्ध कुछ प्रमुख इलेक्ट्रॉनिक सामान
-        </p>
-
-    </div>
-
-
-    <div class="products">
-
-
-        <!-- LED LIGHT -->
-        <div class="card">
-
-            <img
-            src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80"
-            alt="LED Light">
-
-            <div class="card-content">
-
-                <h3>💡 LED Light</h3>
-
-                <p>
-                    घर और दुकान के लिए अच्छी रोशनी वाली LED Light.
-                </p>
-
-                <span class="price">
-                    ₹80 से
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=LED%20Light%20ke%20baare%20mein%20jaankari%20chahiye."
-                   target="_blank">
-                    WhatsApp पर पूछें
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TUBE LIGHT -->
-        <div class="card">
-            alt="Tube Light">
-
-            <div class="card-content">
-
-                <h3>💡 Tube Light</h3>
-
-                <p>
-                    घर, ऑफिस और दुकान के लिए Tube Light.
-                </p>
-
-                <span class="price">
-                    ₹120 से
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=Tube%20Light%20ke%20baare%20mein%20jaankari%20chahiye."
-                   target="_blank">
-                    WhatsApp पर पूछें
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TABLE FAN -->
-        <div class="card">
-            alt="Table Fan">
-
-            <div class="card-content">
-
-                <h3>🌀 Table Fan</h3>
-
-                <p>
-                    घर और ऑफिस के लिए सुविधाजनक Table Fan.
-                </p>
-
-                <span class="price">
-                    Price पूछें
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=Table%20Fan%20ka%20price%20bataye."
-                   target="_blank">
-                    Price पूछें
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PEDESTAL FAN -->
-        <div class="card">
-
-            alt="Pedestal Fan">
-
-            <div class="card-content">
-
-                <h3>🌀 Pedestal Fan</h3>
-
-                <p>
-                    कमरे और बड़े स्थानों के लिए Pedestal Fan.
-                </p>
-
-                <span class="price">
-                    Price पूछें
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=Pedestal%20Fan%20ka%20price%20bataye."
-                   target="_blank">
-                    Price पूछें
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TV -->
-        <div class="card">
-
-            <img
-            src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80"
-            alt="Television">
-
-            <div class="card-content">
-
-                <h3>📺 Television</h3>
-
-                <p>
-                    मनोरंजन के लिए TV और अन्य इलेक्ट्रॉनिक सामान.
-                </p>
-
-                <span class="price">
-                    Price पूछें
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=TV%20ke%20baare%20mein%20jaankari%20chahiye."
-                   target="_blank">
-                    Price पूछें
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- OTHER ELECTRONICS -->
-        <div class="card">
-
-            <img
-            src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=800&q=80"
-            alt="Electronics">
-
-            <div class="card-content">
-
-                <h3>🔌 अन्य Electronics</h3>
-
-                <p>
-                    अन्य इलेक्ट्रॉनिक सामान के लिए हमसे संपर्क करें.
-                </p>
-
-                <span class="price">
-                    Price पूछें
-                </span>
-
-                <a class="buy"
-                   href="https://wa.me/918678043929?text=Mujhe%20aapke%20available%20products%20ke%20baare%20mein%20jaankari%20chahiye."
-                   target="_blank">
-                    पूछताछ करें
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about">
-
-    <div class="section-title">
-
-        <h2>हमारे बारे में</h2>
-
-    </div>
-
-    <div class="about">
-
-        <p>
-            <strong>Sakshi Electronics</strong>
-            Jagdishpur Bazar, Madhepura में आपका अपना
-            Electronics Store है।
-        </p>
-
-        <p>
-            यहाँ आपको रोजमर्रा की जरूरत के इलेक्ट्रॉनिक सामान
-            उचित कीमत पर मिलते हैं।
-        </p>
-
-        <p>
-            हम अपने ग्राहकों को बेहतर सामान और अच्छी सेवा
-            देने की पूरी कोशिश करते हैं।
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-
-    <div class="section-title">
-
-        <h2>Contact Us</h2>
-
-        <p>
-            किसी भी Product की जानकारी के लिए संपर्क करें
-        </p>
-
-    </div>
-
-
-    <div class="contact-box">
-
-
-        <!-- ADDRESS -->
-        <div class="contact-card">
-
-            <h3>📍 Address</h3>
-
-            <p>
-                JAGDISHPUR BAZAR<br>
-                MADHEPURA, BIHAR
-            </p>
-
-        </div>
-
-
-        <!-- WHATSAPP -->
-        <div class="contact-card">
-
-            <h3>💬 WhatsApp</h3>
-
-            <a href="https://wa.me/918678043929"
-               target="_blank">
-
-                +91 86780 43929
-
-            </a>
-
-        </div>
-
-
-        <!-- CALL -->
-        <div class="contact-card">
-
-            <h3>📱 Call</h3>
-
-            <a href="tel:+918678043929">
-
-                Call Now
-
-            </a>
-
-        </div>
-
-
-        <!-- EMAIL -->
-        <div class="contact-card">
-
-            <h3>📧 Email</h3>
-
-            <a href="mailto:sakshielectronics01@gmail.com?subject=Sakshi%20Electronics%20Enquiry">
-
-                Mail Us
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <p>
-        <strong>⚡ Sakshi Electronics</strong>
-    </p>
-
-    <p>
-        Jagdishpur Bazar, Madhepura
-    </p>
-
-    <p>
-        📞 +91 86780 43929
-    </p>
-
-    <p>
-        📧 sakshielectronics01@gmail.com
-    </p>
-
-    <p>
-        © 2026 Sakshi Electronics. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- FLOATING WHATSAPP -->
-<a class="floating-whatsapp"
-   href="https://wa.me/918678043929"
-   target="_blank"
-   aria-label="WhatsApp">
-
-    💬
-
-</a>
-
-</body>
-</html>
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      background: white;
+      box-shadow: 0 3px 15px rgba(0, 45, 90, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 125px;
+      padding: 10px 3%;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+      min-width: 320px;
+    }
+
+    /* Logo */
+    .logo {
+      width: 105px;
+      height: 105px;
+      object-fit: contain;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Shop Name */
+    .brand-text h1 {
+      font-size: clamp(28px, 3.2vw, 50px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #08366d;
+     
